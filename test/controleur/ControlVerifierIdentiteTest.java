@@ -1,6 +1,6 @@
 package controleur;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*; 
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,7 +29,8 @@ class ControlVerifierIdentiteTest {
 	@Test
 	void testVerifierIdentite() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		assertNotNull(controlVerifierIdentite.verifierIdentite("Abraracourcix"), "verifierIdentite ne renvoie pas null");
+		assertTrue(controlVerifierIdentite.verifierIdentite("Abraracourcix"));
+		assertFalse(controlVerifierIdentite.verifierIdentite("Inconnu"));
 
 	}
 
